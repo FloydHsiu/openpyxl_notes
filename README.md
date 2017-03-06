@@ -66,7 +66,7 @@ tuple(ws.rows)
 ```
 
 ##Cell
-儲存worksheet的單位
+儲存在worksheet的單位
 
 ###Cell的一些操作
 ```
