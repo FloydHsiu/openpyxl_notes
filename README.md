@@ -1,6 +1,9 @@
-#openpyxl
+#openpyxl_notes
 
-安裝請參考[Openpyxl](https://openpyxl.readthedocs.io/en/default/)
+>安裝請參考[Openpyxl](https://openpyxl.readthedocs.io/en/default/)
+
+隨附的`test.xlsx`及`test2.xlsx`為兩天不同的匯率表
+以此兩個xlsx可以練習openpyxl的操作
 
 ##Workbook
 xlsx經過讀取或者新建之後，於此package內的class名稱
@@ -49,15 +52,27 @@ ws.cell(row=1, column=1)
 
 #讀取ws內'A'行的值(會取得一個Cell的List)
 ws['A']
+ws['A':'B']
 
 #讀取ws內'1'列的值(會取的一個Cell的List)
 ws['1']
+ws['1':'2']
 
 #將每一行當成一個tuple的清單
 tuple(ws.columns)
 
 #將每一列當成一個tuple的清單
 tuple(ws.rows)
-
 ```
+
+##Cell
+儲存worksheet的單位
+
+###Cell的一些操作
+```
+#取讀Cell的值
+ws['A1'].value
+
+#更動Cell的值
+ws['A1'].value = 20
 
