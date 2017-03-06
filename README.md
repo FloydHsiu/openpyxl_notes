@@ -37,3 +37,27 @@ ws = wb[sheetname]
 wb.save('destination.xlsx')
 ```
 
+##worksheet
+worksheet是由很多的Cell物件組成，所以讀取ws內的值會取得Cell，如果要更動Cell的值，後面將會討論到
+###worksheet的一些操作
+```
+ws = wb.active
+
+#讀取ws內'A1'值(會取得單一一個Cell)(有兩種方法)
+ws['A1']
+ws.cell(row=1, column=1)
+
+#讀取ws內'A'行的值(會取得一個Cell的List)
+ws['A']
+
+#讀取ws內'1'列的值(會取的一個Cell的List)
+ws['1']
+
+#將每一行當成一個tuple的清單
+tuple(ws.columns)
+
+#將每一列當成一個tuple的清單
+tuple(ws.rows)
+
+```
+
